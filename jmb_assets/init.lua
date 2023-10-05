@@ -2,8 +2,6 @@ jmb_assets = {}
 
 local default_path = minetest.get_modpath("jmb_assets")
 
-local jmb_assets.register_sapling = 
-
 -- Ebony Assets
 minetest.register_node("jmb_assets:ebony_leaves", {
 	description = ("Ebony Leaves"),
@@ -29,17 +27,17 @@ minetest.register_node("jmb_assets:ebony_leaves", {
 }
 })
 
-minetest.register_node("jmb_assets:ebony_log", {
+minetest.register_node("jmb_assets:ebony_tree", {
     description = "Ebony Log",
-    tiles = {"jmb_ebony_log_top.png", "jmb_ebony_log_top.png", "jmb_ebony_log_side.png"},
+    tiles = {"jmb_ebony_tree_top.png", "jmb_ebony_tree_top.png", "jmb_ebony_tree.png"},
     paramtype2 = "facedir",
     is_ground_content = false,
-    groups = {snappy = 3, choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+  	groups = {tree = 1, choppy = 3, oddly_breakable_by_hand = 1, flammable = 2},
+	on_place = minetest.rotate_node,
     --sounds = default.node_sound_wood_defaults(),
 })
 
-jmb_assets = {}
-
+--[[
 -- Define the function to register saplings
 function jmb_assets.register_sapling(name, description, tiles, grow_function)
     minetest.register_node(name, {
@@ -79,4 +77,4 @@ end
 
 -- Example usage
 jmb_assets.register_sapling("jmb_assets:ebony_sapling", "Ebony Sapling", {"jmb_ebony_sapling.png"}, grow_sapling)
-
+--]]

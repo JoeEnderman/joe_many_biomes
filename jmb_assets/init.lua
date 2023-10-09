@@ -28,13 +28,113 @@ minetest.register_node("jmb_assets:ebony_leaves", {
 })
 
 minetest.register_node("jmb_assets:ebony_tree", {
-    description = "Ebony Log",
+    description = "Ebony Tree",
     tiles = {"jmb_ebony_tree_top.png", "jmb_ebony_tree_top.png", "jmb_ebony_tree.png"},
     paramtype2 = "facedir",
     is_ground_content = false,
   	groups = {tree = 1, choppy = 3, oddly_breakable_by_hand = 1, flammable = 2},
 	on_place = minetest.rotate_node,
     --sounds = default.node_sound_wood_defaults(),
+})
+
+minetest.register_node("jmb_assets:ebony_wood", {
+	description = ("Ebony Wood Planks"),
+	paramtype2 = "facedir",
+	place_param2 = 0,
+	tiles = {"jmb_ebony_wood.png"},
+	is_ground_content = false,
+	groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3, wood = 1},
+	--sounds = default.node_sound_wood_defaults(),
+})
+
+-- Blue Birch Assets
+minetest.register_node("jmb_assets:blue_birch_leaves", {
+	description = ("Blue Birch Leaves"),
+	tiles = {"jmb_blue_birch_leaves.png"},
+	tiles_special = {"jmb_blue_birch_leaves_solid.png"},
+	waving = 1,
+	drawtype = "allfaces_optional",
+	use_texture_alpha = true,
+	sunlight_propagates = true,
+	paramtype = "light",
+	is_ground_content = false,
+	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	drop = {
+        max_items = 1,
+		items = {
+        items = {
+            {items = {"jmb_assets:blue_birch_sapling"}, rarity = 20},
+        },
+		items = {
+            {items = {"jmb_assets:blue_birch_leaves"},},
+        },
+    },
+}
+})
+
+minetest.register_node("jmb_assets:blue_birch_tree", {
+    description = "Blue Birch Tree",
+    tiles = {"jmb_blue_birch_tree_top.png", "jmb_blue_birch_tree_top.png", "jmb_blue_birch_tree.png"},
+    paramtype2 = "facedir",
+    is_ground_content = false,
+  	groups = {tree = 1, choppy = 3, oddly_breakable_by_hand = 1, flammable = 2},
+	on_place = minetest.rotate_node,
+    --sounds = default.node_sound_wood_defaults(),
+})
+
+minetest.register_node("jmb_assets:blue_birch_wood", {
+	description = ("Blue Birch Wood Planks"),
+	paramtype2 = "facedir",
+	place_param2 = 0,
+	tiles = {"jmb_blue_birch_wood.png"},
+	is_ground_content = false,
+	groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3, wood = 1},
+	--sounds = default.node_sound_wood_defaults(),
+})
+
+-- Ghostwood Assets
+minetest.register_node("jmb_assets:ghostwood_leaves", {
+	description = ("Ghostwood Leaves"),
+	tiles = {"jmb_ghostwood_leaves.png"},
+	tiles_special = {"jmb_ghostwood_leaves_solid.png"},
+	waving = 1,
+	drawtype = "allfaces_optional",
+	use_texture_alpha = true,
+	sunlight_propagates = true,
+	paramtype = "light",
+	is_ground_content = false,
+	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	drop = {
+        max_items = 1,
+		items = {
+        items = {
+            {items = {"jmb_assets:ghostwood_sapling"}, rarity = 20},
+        },
+		items = {
+            {items = {"jmb_assets:ghostwood_leaves"},},
+        },
+    },
+}
+})
+
+minetest.register_node("jmb_assets:ghostwood_tree", {
+    description = "Ghostwood Tree",
+    tiles = {"jmb_ghostwood_tree_top.png", "jmb_ghostwood_tree_top.png", "jmb_ghostwood_tree.png"},
+    paramtype2 = "facedir",
+    is_ground_content = false,
+  	groups = {tree = 1, choppy = 3, oddly_breakable_by_hand = 1, flammable = 2},
+	on_place = minetest.rotate_node,
+    --sounds = default.node_sound_wood_defaults(),
+})
+
+minetest.register_node("jmb_assets:ghostwood_wood", {
+	description = ("Ghostwood Wood Planks"),
+	paramtype2 = "facedir",
+	place_param2 = 0,
+	tiles = {"jmb_ghostwood_wood.png"},
+	is_ground_content = false,
+	groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3, wood = 1},
+	--sounds = default.node_sound_wood_defaults(),
 })
 
 --[[
